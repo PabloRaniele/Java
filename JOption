@@ -1,0 +1,73 @@
+package aula10_2;
+
+import javax.swing.JOptionPane;
+
+public class cadastro_nome {
+
+	public static void main(String[] args) {
+//		//Solicitar uma entrada do Usário
+//		String nome = JOptionPane.showInputDialog("Qual é o seu nome");
+//		String endereco = JOptionPane.showInputDialog("Onde você mora?");
+////		String curso = JOptionPane.showInputDialog("Qual curso você quer fazer?");
+		
+////		//impressão
+//		String mensagem = ("Nome: " + nome);
+//		String mensagem1 = ("Endereco: " + endereco);
+//		String mensagem2 = ("Curso: " + curso);
+//
+//		//imprime no console
+//		System.out.println("Seu nome é " + nome);
+//		System.out.println("Você mora em " + endereco);
+//		System.out.println("Vai ser esse mesmo? " + curso );
+//		//Mostra a mensagem em uma janela
+//		
+//		JOptionPane.showMessageDialog(null, mensagem);
+//		JOptionPane.showMessageDialog(null, mensagem1);
+//		JOptionPane.showMessageDialog(null, mensagem2);
+//		int resposta = JOptionPane.showConfirmDialog(null,"Confirma seus dados?");
+//		int valor1 = JOptionPane.showConfirmDialog(null,"Confirma seu Endereço?");
+//		int resposta = JOptionPane.showConfirmDialog(null,"Você deseja continuar?");
+//		
+//		if (resposta == JOptionPane.YES_OPTION) {
+//			System.out.println("Você escolheu 'sim'");
+//			JOptionPane.showMessageDialog(null, "Você escolheu 'Sim'");
+//			System.out.printf("Confirmou os dados!!: " + nome, endereco);
+//		}else if (resposta == JOptionPane.NO_OPTION) {
+//			System.out.println("Você escolheu 'Não'");
+//		}else if (resposta == JOptionPane.CANCEL_OPTION) {
+//			System.out.println("Você escolheu 'Cancelar'");
+//		}
+		
+		String nome = JOptionPane.showInputDialog("Qual é o seu nome?");
+		String idade = JOptionPane.showInputDialog("Qual sua Idade?");
+		String cid = JOptionPane.showInputDialog("Onde Mora?");
+		String curso = JOptionPane.showInputDialog("Qual seu curso?");
+		String faculdade = JOptionPane.showInputDialog("Faculdade que estuda");
+		double notaescrita = Double.parseDouble(JOptionPane.showInputDialog("Nota da prova escrita?"));
+		double nota1 = Double.parseDouble(JOptionPane.showInputDialog("Nota 1?"));
+		double nota2 = Double.parseDouble(JOptionPane.showInputDialog("Nota  2?"));
+		
+		double media = (notaescrita + nota1 + nota2) / 3;
+		
+		String dados = "\nNome: " + nome + "\nIdade: " + idade + "\nCidade: " + cid + "\nCurso: " + curso + "\nFaculdade: " 
+		+ faculdade + "\nNotaescrita: " + notaescrita + "\nNota1: " + nota1 + "\nNota2: " + nota2 + "\nMedia: " + media;
+         
+		int resposta = JOptionPane.showConfirmDialog(null,"Confirma seus dados?");
+		
+		if (resposta == JOptionPane.YES_OPTION) {
+            System.out.println("Você escolheu 'sim'");
+            JOptionPane.showMessageDialog(null, "Você escolheu 'Sim'");
+            // Mostrar todos os dados usando JOptionPane
+            JOptionPane.showMessageDialog(null, "Confirmou os dados!!: " + dados);
+		}else if (resposta == JOptionPane.NO_OPTION) {
+			System.out.println("Você escolheu 'Não'");
+		}else if (resposta == JOptionPane.CANCEL_OPTION) {
+			System.out.println("Você escolheu 'Cancelar'");
+		}
+			
+//		double nota1 = Double.parseDouble(JOptionPane.showInputDialog("Nota da prova[0 a 100]"));
+		
+		
+	}
+
+}
