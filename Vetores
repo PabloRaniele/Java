@@ -1,0 +1,37 @@
+package exercicio2;
+
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Cad_inscricao {
+
+	public static void main(String[] args) {
+		Locale.setDefault(new Locale("pt", "BR"));
+		 Scanner sc = new Scanner(System.in);
+
+		 System.out.println("Quantas inscrições deseja cadastrar?");
+		 int n = sc.nextInt();
+		 
+		 double[] pe = new double[n];
+		 double[] pp = new double[n];
+		 double[] m = new double[n];
+		 
+		 for (int i=0; i<3; i++) {
+			 System.out.println("Digite sua inscrição:" + (i + 1));
+			 
+			 System.out.println("Digite a nota da prova escrita");
+			 pe[i] = sc.nextDouble();
+			 
+			 System.out.println("Digite a nota da prova pratica");
+			 pp[i] = sc.nextDouble();
+			 
+		     m[i] = (pe[i] + pp[i])/2;
+		 }
+		     
+		     for (int i=0; i<3; i++) {
+		    	 System.out.printf("Media da inscrição %d: %.2f%n", (i +1), m[i]);
+		     }
+		 }
+	}
+
+
