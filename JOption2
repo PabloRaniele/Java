@@ -1,0 +1,35 @@
+package exercicio;
+
+import javax.swing.JOptionPane;
+
+public class cadastro {
+
+	public static void main(String[] args) {
+		
+		
+	
+		String nome_comp = JOptionPane.showInputDialog("Digite seu nome completo:");
+		String ender = JOptionPane.showInputDialog("Digite seu endereco:");
+		String tel = JOptionPane.showInputDialog("Digite o seu telefone:");
+		String N_voo = JOptionPane.showInputDialog("Digite o numero do voo:");
+		String cid_dest = JOptionPane.showInputDialog("Digite o destino:");
+		
+		String dados = "\nNome_completo: " + nome_comp + "\nIdade: " + ender + "\nTelefone: " + tel + "\nN°_Voo: " + cid_dest + "\nCid_destino: ";
+		
+int resposta = JOptionPane.showConfirmDialog(null,"Confirma seus dados?");
+		
+		if (resposta == JOptionPane.YES_OPTION) {
+            System.out.println("Você escolheu 'sim'");
+            JOptionPane.showMessageDialog(null, "Você escolheu 'Sim'");
+            // Mostrar todos os dados usando JOptionPane
+            JOptionPane.showMessageDialog(null, "Confirmou os dados!!: " + dados);
+		}else if (resposta == JOptionPane.NO_OPTION) {
+			System.out.println("Você escolheu 'Não'");
+		}else if (resposta == JOptionPane.CANCEL_OPTION) {
+			System.out.println("Você escolheu 'Cancelar'");
+		}
+		
+		
+	}
+
+}
