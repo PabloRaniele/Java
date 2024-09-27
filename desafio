@@ -1,0 +1,38 @@
+package prova;
+
+import java.util.Scanner;
+
+public class prova {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		//variaveis
+		char[] codigo = new char[3];
+		String[] nome = new String[3];
+		double[] salario = new double[3];
+		double[] vt = new double[3];
+		//cadastro
+		for (int i=0; i<3;i++) {
+			System.out.print("Digite a letra do Setor:");
+			codigo[i]=sc.next().charAt(0);
+			System.out.println("Digite o nome completo:");
+			sc.nextLine();
+			nome[i] = sc.nextLine();
+			System.out.println("Digite o valor do salario:");
+			salario[i] = sc.nextDouble();
+			System.out.println("Digite o valor do vale transporte:");
+			vt[i] = sc.nextDouble();
+		}
+		//impressões
+		System.out.println("\n\n\n");
+		for (int i=0;i<3;i++) {
+			System.out.println("Codigo do Setor: " + codigo[i]);
+			System.out.println("Nome: " + nome[i]);
+			System.out.printf("Salario: %.2f\n", + salario[i]);
+			System.out.printf("Vale Transporte: %.2f\n", + vt[i]);
+			System.out.println();
+		}
+		sc.close();
+	}
+
+}
